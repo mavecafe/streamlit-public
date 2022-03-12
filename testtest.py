@@ -34,7 +34,6 @@ df = pd.DataFrame({
 st.map(df)
 
 
-if st.checkbox('マンションデータ')    
-
+if st.checkbox('マンションデータ'):
      mrdata = pd.read_csv('20200806mr_data1.csv')
      st.table(mrdata)
