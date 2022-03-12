@@ -12,4 +12,4 @@ df = pd.DataFrame({
     'lot':[10,20,30,40]
 })
 
-st.write(df)
+st.table(df.style.highlight_max(axis=0))
