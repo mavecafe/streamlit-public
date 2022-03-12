@@ -23,3 +23,12 @@ df = pd.DataFrame(
     columns=['a','b','c']  
 )
 st.line_chart(df)
+
+
+
+df = pd.DataFrame({
+    'lat':[35.593063,35.6297363,35.5914658],
+    'lon':[139.6776223,139.6898639,139.6688982]
+    
+})
+st.map(df)
