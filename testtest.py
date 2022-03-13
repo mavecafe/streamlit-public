@@ -58,9 +58,22 @@ df = pd.DataFrame({
 })
 st.map(df)
 
+mrdata3 = pd.read_csv('streamlit-public/20200806mr_data3.csv',encoding='utf-8')
+#st.table(mrdata3)
+
+df3 = pd.DataFrame(mrdata3,columns=['lat','lon'])
+
+st.map(mrdata3)
+
+
+
+
+
+
+
 
 if st.checkbox('マンションデータ'):
-     mrdata = pd.read_csv('20200806mr_data1.csv',encoding='utf-8')
+     mrdata = pd.read_csv('streamlit-public/20200806mr_data1.csv',encoding='utf-8')
      st.table(mrdata)
      
      
