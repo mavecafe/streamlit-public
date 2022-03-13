@@ -88,3 +88,9 @@ expander.write('問い合わせ内容を書く')
 expander.write('問い合わせ内容を書く')
 expander.write('問い合わせ内容を書く')
 
+
+
+
+#サイドバーで表示
+condition = st.sidebar.slider('いまのあなたの調子は',0,50,100)
+st.sidebar.write('コンディション', condition)
