@@ -17,7 +17,16 @@ for i in range(100):
     time.sleep(0.05)
 
 
+#サイドバーで表示
+condition = st.sidebar.slider('いまのあなたの調子は',0,50,100)
+st.sidebar.write('コンディション', condition)
 
+
+
+"""
+# 第１章　日本の人口問題
+
+```
 
 
 st.write('ここは日本の結婚率と離婚率のページです')
@@ -91,6 +100,4 @@ expander.write('問い合わせ内容を書く')
 
 
 
-#サイドバーで表示
-condition = st.sidebar.slider('いまのあなたの調子は',0,50,100)
-st.sidebar.write('コンディション', condition)
+
