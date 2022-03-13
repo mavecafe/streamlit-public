@@ -128,7 +128,7 @@ st.bar_chart(mariige)
 
 
 
-oak = pd.read_csv('streamlit-public/oak.csv',encoding='utf-8')
+oak = pd.read_csv('oak.csv',encoding='utf-8')
 #oak = pd.read_csv('streamlit-public/oak.csv',encoding='utf-8')
 oak.set_index("年月", inplace=True)
 #df = pd.DataFrame(oak)
