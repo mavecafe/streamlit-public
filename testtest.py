@@ -52,3 +52,7 @@ import pandas as pd/
 ```
 
 """
+
+
+a = st.text_input('入力してください','ここにどうぞ')
+st.write(a)
