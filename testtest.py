@@ -77,9 +77,9 @@ select = st.selectbox("どちらが欲しい",["bigbox","smallbox"])
 
 if st.button('open'):
     if select == 'bigbox':
-        st.write('empty')
+        st.write('空っぽでした！')
     else:
-        st.write('teresure')
+        st.write('お宝でした！！！')
 
 
 expander = st.expander('問い合わせ')
