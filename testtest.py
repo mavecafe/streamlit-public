@@ -82,7 +82,7 @@ if st.button('open'):
         st.write('teresure')
 
 
-expander = st.beta_expander('問い合わせ')
+expander = st.expander('問い合わせ')
 expander.write('問い合わせ内容を書く')
 expander.write('問い合わせ内容を書く')
 expander.write('問い合わせ内容を書く')
