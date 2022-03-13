@@ -5,6 +5,21 @@ import numpy as np
 
 st.title('テストサイト')
 
+st.write('プログレスバーの表示')
+'Start!'
+
+latest_iteration = st.empty()
+bar = st.progress(0)
+
+for i in range(100):
+    latest_iteration.text(f'もうすぐ表示されます{i+1}')
+    bar.progress(i+1)
+    time.sleep(0.05)
+
+
+
+
+
 st.write('ここは日本の結婚率と離婚率のページです')
 
 
