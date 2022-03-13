@@ -29,7 +29,7 @@ st.sidebar.write('コンディション', condition)
 """
 
 
-st.write('ここは日本の結婚率と離婚率のページです')
+
 
 
 df = pd.DataFrame({
@@ -98,6 +98,6 @@ expander.write('問い合わせ内容を書く')
 expander.write('問い合わせ内容を書く')
 
 
-
+st.write('ここは日本の結婚率と離婚率のページです')
 
 
