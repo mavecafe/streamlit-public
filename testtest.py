@@ -56,3 +56,16 @@ import pandas as pd/
 
 a = st.text_input('入力してください','ここにどうぞ')
 st.write(a)
+
+
+select = st.selectbox("どちらが欲しい",["bigbox","smallbox"])
+
+if st.button('open'):
+    if select == 'bigbox':
+        st.write('empty')
+    else:
+        st.write('teresure')
+
+
+
+
