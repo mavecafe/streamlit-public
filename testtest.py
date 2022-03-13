@@ -3,29 +3,58 @@ import pandas as pd
 import numpy as np
 import time
 
+#サイドバーで表示
+st.sidebar.write('プログレスバーの表示 Start!')
 
-st.title('テストサイト')
-
-st.write('プログレスバーの表示')
-'Start!'
-
-latest_iteration = st.empty()
-bar = st.progress(0)
+latest_iteration = st.sidebar.empty()
+bar = st.sidebar.progress(0)
 
 for i in range(100):
     latest_iteration.text(f'もうすぐ表示されます{i+1}')
     bar.progress(i+1)
     time.sleep(0.05)
 
-
 #サイドバーで表示
 condition = st.sidebar.slider('いまのあなたの調子は',0,50,100)
 st.sidebar.write('コンディション', condition)
 
 
+#サイドバーで表示
+select = st.sidebar.selectbox("どちらが欲しい",["大きい箱","小さい箱"])
+
+if st.sidebar.button('open'):
+    if select == '玉手箱':
+        st.sidebar.write('空っぽでした！')
+    else:
+        st.sidebar.write('お宝でした！！！')
+
+#サイドバーで表示
+a = st.sidebar.text_input('入力してください','ここにどうぞ')
+st.sidebar.write(a)
+
+
+
+
+
+
+
+st.title('ゆっくりてすとさいと')
 
 """
-# 第１章　日本の人口問題
+### 使っているライブラリー
+
+```
+python
+import streamlit as st/
+import numpy as np/
+import pandas as pd/
+```
+
+"""
+
+
+"""
+# 第１章　日本の住宅と人口問題
 
 """
 
@@ -43,12 +72,19 @@ st.table(df.style.highlight_max(axis=0))
 
 
 
+"""
+## 乱数で表示
+"""
 df = pd.DataFrame(
     np.random.rand(20,3),
     columns=['a','b','c']  
 )
 st.line_chart(df)
 
+
+"""
+## マンションデータと地図
+"""
 
 
 df = pd.DataFrame({
@@ -79,32 +115,10 @@ if st.checkbox('マンションデータ'):
      st.table(mrdata)
      
      
-"""
-# 第１章
-## ２節
-### ３項
-
-```
-python
-import streamlit as st/
-import numpy as np/
-import pandas as pd/
-```
-
-"""
 
 
-a = st.text_input('入力してください','ここにどうぞ')
-st.write(a)
 
 
-select = st.selectbox("どちらが欲しい",["bigbox","smallbox"])
-
-if st.button('open'):
-    if select == 'bigbox':
-        st.write('空っぽでした！')
-    else:
-        st.write('お宝でした！！！')
 
 
 #expander = st.expander('問い合わせ')
@@ -129,7 +143,6 @@ st.bar_chart(mariige)
 
 
 oak = pd.read_csv('oak.csv',encoding='utf-8')
-#oak = pd.read_csv('streamlit-public/oak.csv',encoding='utf-8')
 oak.set_index("年月", inplace=True)
 #df = pd.DataFrame(oak)
 st.line_chart(oak)
