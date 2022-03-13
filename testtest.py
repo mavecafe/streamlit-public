@@ -91,11 +91,13 @@ if st.button('open'):
         st.write('お宝でした！！！')
 
 
-expander = st.expander('問い合わせ')
-expander.write('問い合わせ内容を書く')
-expander.write('問い合わせ内容を書く')
-expander.write('問い合わせ内容を書く')
-expander.write('問い合わせ内容を書く')
+#expander = st.expander('問い合わせ')
+#PCの環境ではst.beta_expander　で公開はst.expander 
+# expander = st.beta_expander('問い合わせ')
+# expander.write('問い合わせ内容を書く')
+# expander.write('問い合わせ内容を書く')
+# expander.write('問い合わせ内容を書く')
+# expander.write('問い合わせ内容を書く')
 
 
 st.write('ここは日本の結婚率と離婚率のページです')
