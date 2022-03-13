@@ -118,7 +118,8 @@ if st.button('open'):
 
 st.write('ここは日本の結婚率と離婚率のページです')
 
-mariige = pd.read_csv('streamlit-public/mariige.csv',encoding='utf-8')
+mariige = pd.read_csv('mariige.csv',encoding='utf-8')
+#mariige = pd.read_csv('streamlit-public/mariige.csv',encoding='utf-8')
 mariige.set_index("年", inplace=True)
 #df = pd.DataFrame(oak)
 st.line_chart(mariige)
